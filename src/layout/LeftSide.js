@@ -5,6 +5,9 @@ const LeftSide = () => {
     return (
         <div className="w-72 bg-twitterGray-light">
             LeftSide
+            <Icon iconName="Logo" className="w-7 h-7" />
+            <Icon iconName="Home" className="w-7 h-7" />
+            <Icon iconName="Explore" className="w-7 h-7" />
         </div>
     )
 }
