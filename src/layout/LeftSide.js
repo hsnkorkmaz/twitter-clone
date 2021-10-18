@@ -64,7 +64,7 @@ const LeftSide = () => {
                 </button>
 
             </div>
-            <div>alt taraf</div>
+            <div>bottom</div>
         </div>
     )
 }
