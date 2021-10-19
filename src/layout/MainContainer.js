@@ -4,12 +4,9 @@ import db from '../firebase'
 
 const MainContainer = ({children}) => {
     return (
-        <>
-        { stringify(db.toJSON())}
         <div className="flex min-h-screen max-w-7xl mx-auto">
             {children}
         </div>
-        </>
     )
 }
 
