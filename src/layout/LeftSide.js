@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SideLink from '../components/SideLink';
+import UserBox from '../components/UserBox';
 import Icon from '../icons/Icon';
 
-const LeftSide = () => {
-
-    let iconClassName = "w-6 h-6";
+let iconClassName = "w-6 h-6";
 
     const sideLinks = [
         {
@@ -41,6 +40,14 @@ const LeftSide = () => {
         }
     ];
 
+
+const LeftSide = () => {
+    const [active, setActive] = useState("Home");
+    
+    const handleMenuItemClick = (name) => {
+        setActive(name);
+    }
+
     return (
         <div className=" flex flex-col justify-between w-72 px-2">
             <div>
@@ -53,7 +60,7 @@ const LeftSide = () => {
                         {
                             sideLinks.map(
                                 ({ Name, Icon }) => (
-                                    <SideLink name={Name} Icon={Icon} />
+                                    <SideLink name={Name} Icon={Icon} active={active} onMenuItemClick={handleMenuItemClick} />
                                 )
                             )
                         }
@@ -64,7 +71,9 @@ const LeftSide = () => {
                 </button>
 
             </div>
-            <div>bottom</div>
+            <div>
+                <UserBox />
+            </div>
         </div>
     )
 }
