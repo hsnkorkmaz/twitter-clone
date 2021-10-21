@@ -21,7 +21,7 @@ const RightSide = () => {
                         screenName: 'reactjs'
                     }}
                     options={{
-                        height: '90vh'
+                        height: '100vh'
                     }}
                 />
             </div>

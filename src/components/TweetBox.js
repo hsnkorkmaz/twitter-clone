@@ -3,14 +3,14 @@ import Icon from '../icons/Icon'
 import db from '../firebase'
 import { v4 as uuidv4 } from 'uuid';
 
-import { doc, setDoc } from "firebase/firestore"; 
+import { doc, setDoc } from "firebase/firestore";
 
-const TweetBox = () => {
+const TweetBox = ({updateMethod}) => {
     const [tweet, setTweet] = React.useState("");
 
     const sendTweet = async () => {
         if (tweet.length > 0) {
-             await setDoc(doc(db, "tweets", uuidv4()), {
+            await setDoc(doc(db, "tweets", uuidv4()), {
                 displayName: "Hasan Mustafa",
                 userName: "@hasan_nu_",
                 content: tweet,
@@ -19,12 +19,11 @@ const TweetBox = () => {
                 likes: Math.floor(Math.random() * 1000),
                 comments: Math.floor(Math.random() * 500),
                 retweets: Math.floor(Math.random() * 350)
-              });
-
+            });
             setTweet("");
+            updateMethod();
         }
     }
-
 
 
     return (
@@ -58,14 +57,14 @@ const TweetBox = () => {
                         <Icon iconName="Schedule" className="w-6 h-6 text-twitterPrimary-base" />
                     </div>
                 </div>
-                <button 
-                className="bg-twitterPrimary-base 
+                <button
+                    className="bg-twitterPrimary-base 
                 text-white 
                 rounded-full 
                 px-4 
                 py-2 
                 font-medium"
-                onClick={sendTweet}>Tweet</button>
+                    onClick={sendTweet}>Tweet</button>
             </div>
         </div >
     )
