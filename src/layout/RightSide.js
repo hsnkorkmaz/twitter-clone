@@ -1,7 +1,7 @@
 import React from 'react'
 import { Timeline } from 'react-twitter-widgets'
+import Icon from '../Icons/Icon';
 
-import Icon from '../icons/Icon';
 const RightSide = () => {
 
     let searchIcon = <Icon iconName="Logo" className="w-7 h-7" />;

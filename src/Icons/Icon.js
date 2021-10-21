@@ -26,19 +26,10 @@ const SvgIcons = {
 
 const Icon = ({iconName, className}) => {
     return (
-        <Svg className={className}>
-          {SvgIcons[iconName]}
-        </Svg>
-    );
-}
-
-const Svg = ({ children, className }) => {
-    return (
         <svg viewBox="0 0 24 24" className={`fill-current ${className}`}>
-            {children}
+          {SvgIcons[iconName]}
         </svg>
     );
-};
-
+}
 
 export default Icon

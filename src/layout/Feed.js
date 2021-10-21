@@ -1,10 +1,9 @@
 import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
-import Divider from '../components/Divider'
 import TweetBox from '../components/TweetBox'
 import TweetList from '../components/TweetList'
 import db from '../firebase'
-import Icon from '../icons/Icon'
+import Icon from '../Icons/Icon'
 
 const Feed = () => {
     const [tweets, setTweets] = useState([]);
@@ -33,7 +32,7 @@ const Feed = () => {
                     className="w-11 h-11 rounded-full"></img>
                 <TweetBox updateMethod={getTweets} />
             </div>
-            <Divider />
+            <div className="h-3 bg-twitterGray-lightest border-t border-b border-twitterGray-light" />
             <div>
                 <TweetList tweets={tweets} />
             </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '../icons/Icon'
+import Icon from '../Icons/Icon'
 import db from '../firebase'
 import { v4 as uuidv4 } from 'uuid';
 

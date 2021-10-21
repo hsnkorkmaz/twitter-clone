@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '../icons/Icon'
+import Icon from '../Icons/Icon'
 
 const Tweet = ({
     comments,

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import SideLink from '../components/SideLink';
 import UserBox from '../components/UserBox';
-import Icon from '../icons/Icon';
+import Icon from '../Icons/Icon';
 
 let iconClassName = "w-6 h-6";
 
