@@ -1,6 +1,7 @@
 # Twitter Clone with React and Tailwind // Uses firestore as a db
 
 https://hasan.nu/twitter-clone/
+
 https://hsnkorkmaz.github.io/twitter-clone/
 
 Installation
