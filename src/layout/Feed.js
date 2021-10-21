@@ -1,4 +1,5 @@
 import React from 'react'
+import Divider from '../components/Divider'
 import TweetBox from '../components/TweetBox'
 import Icon from '../icons/Icon'
 
@@ -17,6 +18,7 @@ const Feed = () => {
             className="w-11 h-11 rounded-full"></img>
                <TweetBox />
             </div>
+            <Divider />
         </main>
     )
 }

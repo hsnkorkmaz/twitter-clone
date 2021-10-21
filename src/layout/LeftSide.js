@@ -60,7 +60,7 @@ const LeftSide = () => {
                         {
                             sideLinks.map(
                                 ({ Name, Icon }) => (
-                                    <SideLink name={Name} Icon={Icon} active={active} onMenuItemClick={handleMenuItemClick} />
+                                    <SideLink key={Name} name={Name} Icon={Icon} active={active} onMenuItemClick={handleMenuItemClick} />
                                 )
                             )
                         }

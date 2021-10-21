@@ -1,6 +1,4 @@
-import { stringify } from '@firebase/util'
 import React, { useEffect } from 'react'
-import db from '../firebase'
 
 const MainContainer = ({children}) => {
     return (
